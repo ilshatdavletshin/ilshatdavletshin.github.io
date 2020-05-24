@@ -4,15 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>iD</title>
+  <title>Document</title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
   <section class="main">
+    <div class="button-wrapper">
+      <a href="#" class="button button--cyan hide">
+        <span class="button__line button--cyan__line--top button__line--top"></span>
+        <span class="button__line button--cyan__line--right button__line--right"></span>
+        <span class="button__line button--cyan__line--bottom button__line--bottom"></span>
+        <span class="button__line button--cyan__line--left button__line--left"></span>
+        light mode
+      </a>
+      <a href="#" class="button button--night show">night mode
+      </a>
+    </div>
     <h1>Coming soon</h1>
     <h2>Ilshat Davletshin</h2>
   </section>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $(".button").click(function (e) {
+        e.preventDefault();
+        $('.main').toggleClass('night-bg');
+        $('.button').toggleClass('show');
+        $('.button').toggleClass('hide');
+      })
+    });
+  </script>
 </body>
 
 </html>
