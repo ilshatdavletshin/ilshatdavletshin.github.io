@@ -5,13 +5,20 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "NeonBuglerW00-Regular";
+  src        : url("//db.onlinewebfonts.com/t/439ca5dbbf8a2a7570de9944f31fdbff.eot");
+  src        : url("//db.onlinewebfonts.com/t/439ca5dbbf8a2a7570de9944f31fdbff.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/439ca5dbbf8a2a7570de9944f31fdbff.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/439ca5dbbf8a2a7570de9944f31fdbff.woff") format("woff"), url("//db.onlinewebfonts.com/t/439ca5dbbf8a2a7570de9944f31fdbff.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/439ca5dbbf8a2a7570de9944f31fdbff.svg#NeonBuglerW00-Regular") format("svg");
+}
+
 html,
 body {
-  height     : 100vh;
-  width      : 100%;
-  padding    : 0;
-  margin     : 0;
-  font-family: 'valerina';
+  height          : 100vh;
+  width           : 100%;
+  padding         : 0;
+  margin          : 0;
+  font-family     : 'valerina';
+  background-color: #1a1a5a;
 }
 
 .main {
@@ -28,23 +35,171 @@ body {
   background-position: 50%;
 }
 
+.main.night-bg {
+  background-image: url('../img/night-bg.jpg');
+}
+
 h1 {
-  /* width      : max-content; */
-  /* height     : min-content; */
-  margin     : 0;
-  color      : white;
-  font-weight: 400;
-  font-size  : 10.417vw;
+  position          : relative;
+  margin            : 0;
+  color             : white;
+  font-weight       : 400;
+  font-size         : 10.417vw;
+  -moz-user-select  : none;
+  -khtml-user-select: none;
+  user-select       : none;
+}
+
+h1::before {
+  content         : '';
+  position        : absolute;
+  top             : -20%;
+  left            : -20%;
+  height          : 100%;
+  width           : 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+h1::after {
+  content         : '';
+  position        : absolute;
+  top             : 20%;
+  left            : 20%;
+  height          : 100%;
+  width           : 100%;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 h2 {
-  position    : absolute;
-  bottom      : 0;
-  right       : 0;
-  margin      : 0;
-  margin-left : auto;
-  margin-right: 2.083vw;
-  color       : white;
-  font-size   : 4.167vw;
-  font-weight : normal;
+  position          : absolute;
+  bottom            : 0;
+  right             : 0;
+  margin            : 0;
+  margin-left       : auto;
+  margin-right      : 2.083vw;
+  color             : white;
+  font-size         : 4.167vw;
+  font-weight       : normal;
+  -moz-user-select  : none;
+  -khtml-user-select: none;
+  user-select       : none;
+}
+
+.button-wrapper {
+  position: absolute;
+  top     : 3%;
+  right   : 2.083vw;
+}
+
+.button--night {
+  padding: 0.521vw 1.042vw;
+  color  : white;
+  border : 0.104vw solid white;
+}
+
+.button {
+  position          : relative;
+  display           : inline-block;
+  padding           : 0.833vw 1.667vw;
+  font-size         : 2.083vw;
+  font-family       : "NeonBuglerW00-Regular";
+  text-transform    : uppercase;
+  text-decoration   : none;
+  letter-spacing    : 0.208vw;
+  overflow          : hidden;
+  -moz-user-select  : none;
+  -khtml-user-select: none;
+  user-select       : none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.button__line {
+  position: absolute;
+  display : block;
+}
+
+.button--cyan {
+  color: #0ABDC6;
+}
+
+.button--cyan__line--top {
+  background: linear-gradient(90deg, transparent, #0ABDC6);
+}
+
+.button--cyan__line--bottom {
+  background: linear-gradient(180deg, transparent, #0ABDC6);
+}
+
+.button--cyan__line--left {
+  background: linear-gradient(0deg, transparent, #0ABDC6);
+}
+
+.button--cyan__line--right {
+  background: linear-gradient(270deg, transparent, #0ABDC6);
+}
+
+.button__line--top {
+  top   : 0;
+  left  : -100%;
+  width : 100%;
+  height: 0.104vw;
+}
+
+.button:hover .button__line--top {
+  left            : 100%;
+  transition      : 1s;
+  transition-delay: 0.25s;
+}
+
+.button__line--bottom {
+  bottom: 0;
+  right : -100%;
+  width : 100%;
+  height: 0.104vw;
+}
+
+.button:hover .button__line--bottom {
+  right           : 100%;
+  transition      : 1s;
+  transition-delay: 0.25s;
+}
+
+.button__line--left {
+  bottom: -100%;
+  left  : 0;
+  width : 0.104vw;
+  height: 100%;
+}
+
+.button:hover .button__line--left {
+  bottom          : 100%;
+  transition      : 1s;
+  transition-delay: 0s;
+}
+
+.button__line--right {
+  top   : -100%;
+  right : 0;
+  width : 0.104vw;
+  height: 100%;
+}
+
+.button:hover .button__line--right {
+  top             : 100%;
+  transition      : 1s;
+  transition-delay: 0s;
+}
+
+.button--cyan:hover {
+  color           : #091833;
+  box-shadow      : 0 0 0.521vw #0ABDC6, 0 0 2.083vw #0ABDC6, 0 0 4.167vw #0ABDC6;
+  background-color: #0ABDC6;
+  transition-delay: 0.6s;
 }
