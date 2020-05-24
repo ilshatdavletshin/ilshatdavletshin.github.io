@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "valerina";
+  src        : url("/fonts/valerina.ttf") format("truetype");
+  font-style : normal;
+  font-weight: normal;
+}
+
+html,
+body {
+  height     : 100vh;
+  width      : 100%;
+  padding    : 0;
+  margin     : 0;
+  font-family: 'valerina';
+}
+
+.main {
+  position           : relative;
+  display            : flex;
+  flex-direction     : column;
+  align-items        : center;
+  justify-content    : center;
+  height             : inherit;
+  padding            : 0;
+  margin             : 0;
+  background-image   : url('../img/main-bg.jpg');
+  background-size    : cover;
+  background-position: 50%;
+}
+
+h1 {
+  /* width      : max-content; */
+  /* height     : min-content; */
+  margin     : 0;
+  color      : white;
+  font-weight: 400;
+  font-size  : 10.417vw;
+}
+
+h2 {
+  position    : absolute;
+  bottom      : 0;
+  right       : 0;
+  margin      : 0;
+  margin-left : auto;
+  margin-right: 2.083vw;
+  color       : white;
+  font-size   : 4.167vw;
+  font-weight : normal;
+}
