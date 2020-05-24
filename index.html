@@ -9,6 +9,13 @@
 </head>
 
 <body>
+  <!-- <div id="wrap_preloader">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div> -->
   <section class="main">
     <div class="button-wrapper">
       <a href="#" class="button button--cyan hide">
@@ -18,7 +25,7 @@
         <span class="button__line button--cyan__line--left button__line--left"></span>
         light mode
       </a>
-      <a href="#" class="button button--night show">night mode
+      <a href="#" class="button button--night show">neon mode
       </a>
     </div>
     <h1>Coming soon</h1>
@@ -27,6 +34,9 @@
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
     crossorigin="anonymous"></script>
   <script>
+    // $(window).on('load', function () {
+    //   $('#wrap_preloader').delay(500).fadeToggle(500);
+    // });
     $(document).ready(function () {
       $(".button").click(function (e) {
         e.preventDefault();
